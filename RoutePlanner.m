@@ -1,5 +1,6 @@
 function route = RoutePlanner(map)
-%RoutePlanner creates a very basic route S-shaped route that ignores walls 
+%RoutePlanner creates a very basic route S-shaped route
+%ignores walls for the time being
 %Input args
 %  map = matrix of unknown height and width
 %Output args
@@ -9,6 +10,7 @@ function route = RoutePlanner(map)
 route=zeros(m*n,3);
 routeSlot=1;
 for y = 1:m
+    %moves from left to right on odds and left to right on evens
     if rem(y,2)~=0
         for x = 1:n
             route(routeSlot,1)=x;
