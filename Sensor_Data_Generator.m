@@ -2,6 +2,7 @@ fclose('all');
 clear
 clc
 %Generates a rectangular room of random dimensions between 10 and 100 with random variables 0-4.
+%This version does not export to excel
 R=randi([0,4],randi([10,15]),randi([10,15]));
 %Replaces all 1s and 2s with random 3s or 4s.
 [l,w]=size(R);
@@ -38,9 +39,3 @@ image(R+1);
 colormap(map);
 axis('image');
 axis off
-
-%Asks for filename and sheet name for data to be written to.
-fname=input('Enter name of file to write room sensor data to','s');
-sname=input('Enter name of sheet in file where data will be written to','s');
-%Exports to excel file.
-xlswrite(fname,R,sname)
