@@ -17,7 +17,7 @@ while fstats(1) / fstats(2) ~= 1                                  % While 100% o
 end
 fstats=fchecker(R,1); %Run fchecker again to ensure that all of the floor has been cleaned
 if fstats(1)~=fstats(2)
-    run dumberbot.m
+    run economy_the_rs_group.m
 else
     [rloc,battery,at]=recharge(R,rloc,cloc,battery,at,ur);                        % return to charger
 end
