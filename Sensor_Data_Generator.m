@@ -1,9 +1,9 @@
 fclose('all');
 clear
 clc
-%Generates a rectangular room of random dimensions between 10 and 100 with random variables 0-4.
+%Generates a rectangular room of random dimensions between 5 and 25 with random variables 0-4.
 %This version does not export to excel
-R=randi([0,4],randi([10,15]),randi([10,15]));
+R=randi([0,4],randi([5,25]),randi([5,22]));
 %Replaces all 1s and 2s with random 3s or 4s.
 [l,w]=size(R);
 for li=1:l

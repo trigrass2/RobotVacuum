@@ -10,10 +10,12 @@ function [fstats,rloc,cloc,dirty]=fchecker(floorplan,bottype)
 %  fstats(2): the number of spaces that the robot is able to move to
 %  dirty: an array that the smartbot can use to find the nearest dirty spot on the floor.
 %% For checks all values on the floorplan and determines the values needed for fstats and dirty.
+fstats=[0 0];
+dirty=[0 0];
 if bottype==1  %if dumbot
     for L=1:size(floorplan,1) %for all rows
         for W=1:size(floorplan,2) % and all columns
-            if floorplan(L,W)==5 || floorplan(L,W)==1 || floorplan ==2 %If the robot has already cleaned there, or is there currently, or if the charger is there
+            if floorplan(L,W)==5 || floorplan(L,W)==1 || floorplan(L,W)==2 %If the robot has already cleaned there, or is there currently, or if the charger is there
                 fstats(1)=fstats(1)+1;  %Add one to the number of spaces that do not need to be cleaned
             end
             if floorplan(L,W)~=0        %If the robot can move to the space (may want to add an option to determine if there are 0s in all 8 directions even if the space is not 0)
@@ -25,6 +27,7 @@ if bottype==1  %if dumbot
             if floorplan(L,W)~=2        %If the robot can move to the space (may want to add an option to determine if there are 0s in all 8 directions even if the space is not 0)
                 cloc=[L W];             %Saves charger location
             end
+            
         end
     end
 else %if smartbot

@@ -8,7 +8,7 @@
 while fstats(1) / fstats(2) ~= 1                                  % While 100% of floor is not clean
     et=et+sum(at);
     if battery==0                                                 % If battery charge is 0
-        [rloc,battery,at]=recharge(R,rloc,cloc,battery,at,ur);    % Recharge
+        [rloc,R,ur,battery,at]=recharge(R,rloc,cloc,battery,ur);    % Recharge
     else                                                          % keep cleaning
         dest=ddfinder(rloc,R);
         path=Astar(R,current,dest);
@@ -19,5 +19,5 @@ fstats=fchecker(R,1); %Run fchecker again to ensure that all of the floor has be
 if fstats(1)~=fstats(2)
     run regular_the_rs_group.m
 else
-    [rloc,battery,at]=recharge(R,rloc,cloc,battery,at,ur);                        % return to charger
+    [rloc,R,ur,battery,at]=recharge(R,rloc,cloc,battery,ur);                        % return to charger
 end

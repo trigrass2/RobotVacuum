@@ -7,8 +7,9 @@ function [dest]=ddfinder(rloc,R)
 %  Output:
 %   Determines a destination for the dumb robots
 %% Chooses a destination based on the current location of the robot
-
-c=rnd(size(R)/2); % Finds center of room
+c=size(R)/2;
+c(1)=round(c(1)); % Finds center of room
+c(2)=round(c(2));
 crel=c-rloc; % Finds rows and columns between robot and the center of the room
 if crel(1)>=0 && crel(2)>=0  %Quadrant= 4
     %If robot in quadrant 4, choose a destination in quadrant 1;

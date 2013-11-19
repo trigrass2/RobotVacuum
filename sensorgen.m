@@ -9,8 +9,8 @@ function R=sensorgen(fname,sname)
 %Output Arguments:
 % R: Matrix of data for analysis
 
-%Generates a rectangular room of random dimensions between 10 and 25 with random variables 0-4.
-R=randi([0,4],randi([10,25]),randi([10,25]));
+%Generates a rectangular room of random dimensions between 5 and 25 with random variables 0-4.
+R=randi([0,4],randi([5,25]),randi([5,22]));
 %Replaces all 1s and 2s with random 3s or 4s.
 [l,w]=size(R);
 for li=1:l
