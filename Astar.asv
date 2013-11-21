@@ -91,14 +91,11 @@ h=sum(abs(dest-current(1:2)));
 
 function [current,came_from]=choosecurrent(current,openset,came_from,n)     %Chooses new current from openset based on the location in openset with the lowest f value
 [~,in]=min(n(:,5));
-
-if iscoord(openset,n(in,1:2))
-    if iscoord(came_from,current)==0
-        came_from=[came_from;current];
-    end
+if iscoord(came_from,current)==0
+    came_from=[came_from;current];
+end
+if iscoord(openset(n(in,1:2)))
     current=n(in,:);
 else
-    n=removecoord(n,n(in,1:2));
-    [current,came_from]=choosecurrent(current,openset,came_from,n);
-end
+    n=removecoord(n,
     

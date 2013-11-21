@@ -1,4 +1,3 @@
-
 %dumbbot.m
 %cleans 100% of floor
 %Import floor plan, save as R

@@ -21,13 +21,12 @@ if bottype==1  %if dumbot
             if floorplan(L,W)~=0        %If the robot can move to the space (may want to add an option to determine if there are 0s in all 8 directions even if the space is not 0)
                 fstats(2)=fstats(2)+1;  %Adds one to the number of spaces that the robot could potentially clean
             end
-            if floorplan(L,W)~=1        %If the robot can move to the space (may want to add an option to determine if there are 0s in all 8 directions even if the space is not 0)
+            if floorplan(L,W)==1        %If the robot can move to the space (may want to add an option to determine if there are 0s in all 8 directions even if the space is not 0)
                 rloc=[L W];             %Saves robot location
             end
-            if floorplan(L,W)~=2        %If the robot can move to the space (may want to add an option to determine if there are 0s in all 8 directions even if the space is not 0)
+            if floorplan(L,W)==2        %If the robot can move to the space (may want to add an option to determine if there are 0s in all 8 directions even if the space is not 0)
                 cloc=[L W];             %Saves charger location
-            end
-            
+            end            
         end
     end
 else %if smartbot
@@ -42,10 +41,10 @@ else %if smartbot
             if floorplan(L,W)==4  %If the space is dirty, take special note of that space for the smart robot to take care of later.
                 dirty=[dirty;L,W]; %#ok<AGROW>
             end
-            if floorplan(L,W)~=1        %If the robot can move to the space (may want to add an option to determine if there are 0s in all 8 directions even if the space is not 0)
+            if floorplan(L,W)==1        %If the robot can move to the space (may want to add an option to determine if there are 0s in all 8 directions even if the space is not 0)
                 rloc=[L W];             %Saves robot location
             end
-            if floorplan(L,W)~=2        %If the robot can move to the space (may want to add an option to determine if there are 0s in all 8 directions even if the space is not 0)
+            if floorplan(L,W)==2        %If the robot can move to the space (may want to add an option to determine if there are 0s in all 8 directions even if the space is not 0)
                 cloc=[L W];             %Saves charger location
             end
         end
