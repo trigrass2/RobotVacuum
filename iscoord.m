@@ -1,6 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+%% Determines if coordinates is in a set of coordinates
+=======
+>>>>>>> 3efeb8af2c08d848790d3cc3adfef4d4bfa8db8f
+>>>>>>> origin/complete-code
+=======
 %% Determines if coordinates is in a set of coordinates
 =======
 >>>>>>> 3efeb8af2c08d848790d3cc3adfef4d4bfa8db8f
@@ -13,8 +19,14 @@ function yn=iscoord(set,coord)
 % yn: returns a 1 of the coordinates are present in the set and a 0 if the coordinates are not
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+for l=1:size(set,1)
+    if set(l,1)==coord(1) && set(l,2)==coord(2)
+=======
+>>>>>>> origin/complete-code
+=======
 for l=1:size(set,1)
     if set(l,1)==coord(1) && set(l,2)==coord(2)
 =======
@@ -26,6 +38,10 @@ end
 for k=1:size(set,1)
     if set(k,1)==coord(1) && set(k,2)==coord(2)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3efeb8af2c08d848790d3cc3adfef4d4bfa8db8f
+>>>>>>> origin/complete-code
 =======
 >>>>>>> 3efeb8af2c08d848790d3cc3adfef4d4bfa8db8f
 >>>>>>> origin/complete-code

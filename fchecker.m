@@ -22,8 +22,11 @@ if bottype==1  %if dumbot
                 fstats(2)=fstats(2)+1;  %Adds one to the number of spaces that the robot could potentially clean
             end
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/complete-code
             if floorplan(L,W)~=1        %If the robot can move to the space (may want to add an option to determine if there are 0s in all 8 directions even if the space is not 0)
                 rloc=[L W];             %Saves robot location
             end
@@ -31,6 +34,9 @@ if bottype==1  %if dumbot
                 cloc=[L W];             %Saves charger location
             end
             
+=======
+<<<<<<< HEAD
+>>>>>>> origin/complete-code
 =======
 >>>>>>> origin/complete-code
             if floorplan(L,W)==1        %If the robot can move to the space (may want to add an option to determine if there are 0s in all 8 directions even if the space is not 0)
@@ -40,6 +46,10 @@ if bottype==1  %if dumbot
                 cloc=[L W];             %Saves charger location
             end            
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3efeb8af2c08d848790d3cc3adfef4d4bfa8db8f
+>>>>>>> origin/complete-code
 =======
 >>>>>>> 3efeb8af2c08d848790d3cc3adfef4d4bfa8db8f
 >>>>>>> origin/complete-code
@@ -58,12 +68,18 @@ else %if smartbot
                 dirty=[dirty;L,W]; %#ok<AGROW>
             end
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/complete-code
             if floorplan(L,W)~=1        %If the robot can move to the space (may want to add an option to determine if there are 0s in all 8 directions even if the space is not 0)
                 rloc=[L W];             %Saves robot location
             end
             if floorplan(L,W)~=2        %If the robot can move to the space (may want to add an option to determine if there are 0s in all 8 directions even if the space is not 0)
+=======
+<<<<<<< HEAD
+>>>>>>> origin/complete-code
 =======
 >>>>>>> origin/complete-code
             if floorplan(L,W)==1        %If the robot can move to the space (may want to add an option to determine if there are 0s in all 8 directions even if the space is not 0)
@@ -71,6 +87,10 @@ else %if smartbot
             end
             if floorplan(L,W)==2        %If the robot can move to the space (may want to add an option to determine if there are 0s in all 8 directions even if the space is not 0)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3efeb8af2c08d848790d3cc3adfef4d4bfa8db8f
+>>>>>>> origin/complete-code
 =======
 >>>>>>> 3efeb8af2c08d848790d3cc3adfef4d4bfa8db8f
 >>>>>>> origin/complete-code

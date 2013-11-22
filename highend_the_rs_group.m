@@ -1,6 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+
+=======
+>>>>>>> 3efeb8af2c08d848790d3cc3adfef4d4bfa8db8f
+>>>>>>> origin/complete-code
+=======
 
 =======
 >>>>>>> 3efeb8af2c08d848790d3cc3adfef4d4bfa8db8f

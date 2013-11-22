@@ -11,11 +11,17 @@ function route=Astar(R,current,dest)
 %
 %% Internalized Variables:
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/complete-code
 %  closedset:  The set of locations already evaluated.
 %  g: matrix of g values at each node
 %  f: matrix of f values at each node
+=======
+<<<<<<< HEAD
+>>>>>>> origin/complete-code
 =======
 >>>>>>> origin/complete-code
 %  Columns of coordinates
@@ -26,6 +32,10 @@ function route=Astar(R,current,dest)
 %  Column 5: f=g+h
 %  closedset:  The set of locations already evaluated.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3efeb8af2c08d848790d3cc3adfef4d4bfa8db8f
+>>>>>>> origin/complete-code
 =======
 >>>>>>> 3efeb8af2c08d848790d3cc3adfef4d4bfa8db8f
 >>>>>>> origin/complete-code
@@ -35,8 +45,11 @@ function route=Astar(R,current,dest)
 %
 %% Generate initial g, f and openset.                                                                          
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/complete-code
 g=ones(size(R))/eps;                                                                                   % Creates matrix g with values at 1/eps which is as close to infite as needed for these purposes
 f=ones(size(R))/eps;                                                                                   % Creates matrix f with values at 1/eps which is as close to infite as needed for these purposes
 g(current(1),current(2))=0;                                                                            % Enters the current distance traversed into g at current location.
@@ -47,6 +60,9 @@ closedset=[];
 while isempty(openset)==0                                                                              % openset is not empty
      current=choosecurrent(openset,R);                                                                 % Chooses new current from openset based on the location in openset with the lowest f value          
      if current == dest                                                                                % Indicates destination has been reached
+=======
+<<<<<<< HEAD
+>>>>>>> origin/complete-code
 =======
 >>>>>>> origin/complete-code
 current(3)=0; current(4)=h_estimate(current,dest); current(5)=current(3)+current(4);
@@ -61,6 +77,10 @@ while isempty(route)                                                            
      [current,came_from]=choosecurrent(current,openset,came_from,n);                                     % Chooses new current from openset based on the location in openset with the lowest f value          
      if current(1)==dest(1) && current(2)==dest(2)                                                     % Indicates destination has been reached
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3efeb8af2c08d848790d3cc3adfef4d4bfa8db8f
+>>>>>>> origin/complete-code
 =======
 >>>>>>> 3efeb8af2c08d848790d3cc3adfef4d4bfa8db8f
 >>>>>>> origin/complete-code
@@ -70,8 +90,11 @@ while isempty(route)                                                            
          openset=removecoord(openset,current);                                                         % remove current from openset
          closedset=[current;closedset];                                                   %#ok<*AGROW> % add current to closedset
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/complete-code
          n=neighbor_nodes(current);                                                                    % generate neigbor list for current
          for k=1:8                                                                                     % Each location in n=neighbor_nodes(current) 
              neighbor=[n(k,1),n(k,2)];                                                                 % save coordinates for neighbor being tested
@@ -88,6 +111,9 @@ while isempty(route)                                                            
              else                                                                                      % No route availailable
                  route=[];
 =======
+<<<<<<< HEAD
+>>>>>>> origin/complete-code
+=======
 >>>>>>> origin/complete-code
          n=neighbor_nodes(current,R,dest);                                                           % generate neigbor list for current
          for p=1:size(n,1)
@@ -96,6 +122,10 @@ while isempty(route)                                                            
                  openset=[openset;n(p,:)];
              else
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3efeb8af2c08d848790d3cc3adfef4d4bfa8db8f
+>>>>>>> origin/complete-code
 =======
 >>>>>>> 3efeb8af2c08d848790d3cc3adfef4d4bfa8db8f
 >>>>>>> origin/complete-code
@@ -104,8 +134,11 @@ while isempty(route)                                                            
      end
  end
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/complete-code
 %% Generates a weighted value to prioritize cleaning dirty spaces while avoiding areas that have already been covered
 function w=weighting(neighbor,R)
 switch R(neighbor(1),neighbor(2))
@@ -121,6 +154,9 @@ end
 %Weights are tentative pending testing
 %% Reconstructs the route that the robot will take to its destination.
 function route=reconstruct_route(cf)
+=======
+<<<<<<< HEAD
+>>>>>>> origin/complete-code
 =======
 >>>>>>> origin/complete-code
 
@@ -139,6 +175,10 @@ end
 
 function route=reconstruct_route(came_from) % Reconstructs the route that the robot will take to its destination.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3efeb8af2c08d848790d3cc3adfef4d4bfa8db8f
+>>>>>>> origin/complete-code
 =======
 >>>>>>> 3efeb8af2c08d848790d3cc3adfef4d4bfa8db8f
 >>>>>>> origin/complete-code
@@ -147,8 +187,11 @@ function route=reconstruct_route(came_from) % Reconstructs the route that the ro
 % Output:
 %  route: reconstructed route containing the direction that the robot will move.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/complete-code
 for k=1:length(cf)-1
     route(k)=cf(k)-cf(k+1);
 end
@@ -166,6 +209,9 @@ for k=1:size(openset,1)
 end
 [~,i]=min(fopenset);
 current=openset(i,:);
+=======
+<<<<<<< HEAD
+>>>>>>> origin/complete-code
 =======
 >>>>>>> origin/complete-code
 for k=1:length(came_from)-1
@@ -203,7 +249,12 @@ else
     [current,came_from]=choosecurrent(current,openset,came_from,n);
 end
 <<<<<<< HEAD
+<<<<<<< HEAD
     
+=======
+    
+>>>>>>> 3efeb8af2c08d848790d3cc3adfef4d4bfa8db8f
+>>>>>>> origin/complete-code
 =======
     
 >>>>>>> 3efeb8af2c08d848790d3cc3adfef4d4bfa8db8f
